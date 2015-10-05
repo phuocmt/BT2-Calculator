@@ -33,7 +33,8 @@ class ViewController: UIViewController {
         
         if isTypingNumber {
             calculatorDisplay.text = calculatorDisplay.text! + number!!
-        } else {
+        } else
+        {
             calculatorDisplay.text = number
             isTypingNumber = true
         }
@@ -42,8 +43,6 @@ class ViewController: UIViewController {
     @IBAction func calculationTapped(sender: AnyObject) {
         isTypingNumber = false
         firstNumber = Int(calculatorDisplay.text!)
-        
-        
         operation = sender.currentTitle!!
     }
     
